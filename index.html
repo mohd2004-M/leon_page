@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ========== بيانات الصفحة (META) ========== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leon – Super Creative &amp; Minimal Agency Web Template</title>
+  <meta name="description" content="Leon: a super creative and minimal agency one-page website.">
+
+  <!-- خط Work Sans من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- مكتبة Font Awesome (نسخة محلية): ملف css/all.min.css + مجلد webfonts -->
+  <link rel="stylesheet" href="css/all.min.css">
+
+  <!-- ملف تنسيقات الصفحة -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- ========== الهيدر: الشعار + زر القائمة ========== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Leon home">l<span>o</span></a>
+      <!-- زر القائمة (خطّان): بيفتح القائمة الجانبية -->
+      <button class="menu-btn" id="menu-open" aria-label="Open menu" aria-expanded="false" aria-controls="side-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== القائمة الجانبية (مخفية لحد ما يُضغط زر القائمة) ========== -->
+  <!-- طبقة معتمة خلف القائمة: الضغط عليها بيسكّر القائمة -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="side-menu" id="side-menu" aria-label="Main menu">
+    <!-- زر الإغلاق × -->
+    <button class="side-menu__close" id="menu-close" aria-label="Close menu">&times;</button>
+    <h4>Menu</h4>
+    <a href="#home" class="is-current">Home</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About</a>
+    <h4>Get in touch</h4>
+    <a href="#contact">Contact Me</a>
+    <h4>Get social</h4>
+    <a href="#">Behance</a>
+    <a href="#">Dribbble</a>
+    <a href="#">Twitter</a>
+  </aside>
+
+  <main>
+    <!-- ========== قسم الترحيب (Hero): عنوان + صورة الجبال ========== -->
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>Hello There!</h1>
+        <p>We are Leon &ndash; Super Creative &amp; Minimal Agency Web Template</p>
+      </div>
+      <!-- صورة الجبال: موضوعة كخلفية من ملف main.css -->
+      <div class="hero__image" role="img" aria-label="Snow-covered mountains in black and white"></div>
+    </section>
+
+    <!-- ========== ثلاث ميزات: كيف نشتغل ========== -->
+    <section class="container features" aria-label="How we work">
+      <!-- الميزة 1 -->
+      <article class="feature">
+        <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+        <h3>Tell Us Your Idea</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labe.</p>
+      </article>
+      <!-- الميزة 2 (البطاقة الوسطى مرفوعة بظل) -->
+      <article class="feature feature--raised">
+        <i class="fa-solid fa-gem" aria-hidden="true"></i>
+        <h3>We Will Do All The Work</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labe.</p>
+      </article>
+      <!-- الميزة 3 -->
+      <article class="feature">
+        <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
+        <h3>Your Product is Worldwide</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labe.</p>
+      </article>
+    </section>
+
+    <!-- ========== قسم الخدمات: أربع خدمات + صورة ========== -->
+    <section class="section" id="services">
+      <div class="container">
+        <!-- عنوان القسم: الكلمة الكبيرة الباهتة تُؤخذ من data-bg -->
+        <header class="section-head" data-bg="services"><p>Don't be busy, be productive</p></header>
+
+        <div class="services">
+          <!-- قائمة الخدمات الأربع -->
+          <div class="services__list">
+            <!-- الخدمة 1 -->
+            <article class="service">
+              <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+              <div><h3>Graphic Design</h3><p>Graphic design is the process of visual communication and problem-solving using one or more of typography, photography and illustration.</p></div>
+            </article>
+            <!-- الخدمة 2 -->
+            <article class="service">
+              <i class="fa-solid fa-link" aria-hidden="true"></i>
+              <div><h3>Web Design</h3><p>Web design encompasses many different skills and disciplines in the production and maintenance of websites.</p></div>
+            </article>
+            <!-- الخدمة 3 -->
+            <article class="service">
+              <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+              <div><h3>UI &amp; UX</h3><p>Process of enhancing user satisfaction with a product by improving the usability, accessibility and pleasure in the interaction.</p></div>
+            </article>
+            <!-- الخدمة 4 -->
+            <article class="service">
+              <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+              <div><h3>Web Development</h3><p>Web development is the work involved in developing a web site for the Internet or an intranet.</p></div>
+            </article>
+          </div>
+          <!-- الصورة على اليمين (المستطيل الداكن خلفها من CSS) -->
+          <div class="services__photo"><img src="images/hero.jpg" alt="Mountain peak"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== قسم الأعمال: ثلاث بطاقات مشاريع (صور Pixabay بترخيص مجاني) ========== -->
+    <!-- ملاحظة: onerror بيعرض صورة hero.jpg المحلية إذا فشل تحميل صورة Pixabay -->
+    <section class="section section--soft" id="portfolio">
+      <div class="container">
+        <header class="section-head" data-bg="portfolio"><p>If you do it right, it will last forever</p></header>
+
+        <div class="projects">
+          <!-- المشروع 1 -->
+          <article class="project">
+            <img src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_1280.jpg" alt="Laptop and notebook on a wooden desk" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/hero.jpg'">
+            <div class="project__body"><h3>Project Here</h3><p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p></div>
+          </article>
+          <!-- المشروع 2 -->
+          <article class="project">
+            <img src="https://cdn.pixabay.com/photo/2015/01/16/15/00/desk-601540_1280.jpg" alt="Desk with laptop and coffee" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/hero.jpg'">
+            <div class="project__body"><h3>Project Here</h3><p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p></div>
+          </article>
+          <!-- المشروع 3 -->
+          <article class="project">
+            <img src="https://cdn.pixabay.com/photo/2016/11/21/16/27/laptop-1846277_1280.jpg" alt="Laptop on a dark office desk" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/hero.jpg'">
+            <div class="project__body"><h3>Project Here</h3><p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p></div>
+          </article>
+        </div>
+        <!-- زر "عرض المزيد" -->
+        <div class="center"><a href="#" class="btn">Show Me More</a></div>
+      </div>
+    </section>
+
+    <!-- ========== قسم من نحن: صورة بشكل L أخضر + نص ========== -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head" data-bg="about"><p>Less is more work</p></header>
+
+        <div class="about">
+          <!-- الصورة (شكل L الأخضر مرسوم بـ CSS) -->
+          <div class="about__photo"><img src="https://cdn.pixabay.com/photo/2015/01/16/15/00/desk-601540_1280.jpg" alt="About us: a tidy workspace" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/hero.jpg'"></div>
+          <!-- النص: فقرة بارزة + خط أخضر + فقرة عادية -->
+          <div class="about__text">
+            <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</strong>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== قسم التواصل: البريد الإلكتروني + روابط السوشيال ========== -->
+    <section class="section section--soft" id="contact">
+      <div class="container">
+        <header class="section-head" data-bg="contact"><p>We are born to create</p></header>
+
+        <div class="contact">
+          <h3>Feel free to drop us a line at:</h3>
+          <!-- رابط البريد: بيفتح تطبيق الإيميل -->
+          <a href="mailto:leonagency@mail.com" class="contact__mail">leonagency@mail.com</a>
+          <!-- أيقونات السوشيال من Font Awesome -->
+          <div class="contact__social">
+            <span>Find us on social networks:</span>
+            <a href="#" aria-label="Behance"><i class="fa-brands fa-behance" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== الفوتر (شريط حقوق النشر) ========== -->
+  <footer class="footer">&copy; 2026 <span>Leon</span>. All rights reserved.</footer>
+
+  <!-- ========== JavaScript: التحكم بالقائمة الجانبية ========== -->
+  <script>
+    const body = document.body;
+    const openBtn = document.getElementById('menu-open');
+
+    // فتح أو إغلاق القائمة: بنضيف أو بنشيل كلاس menu-open على <body>
+    function setMenu(isOpen) {
+      body.classList.toggle('menu-open', isOpen);
+      openBtn.setAttribute('aria-expanded', isOpen);
+    }
+
+    openBtn.addEventListener('click', () => setMenu(true));                                 // زر القائمة: فتح
+    document.getElementById('menu-close').addEventListener('click', () => setMenu(false));  // زر ×: إغلاق
+    document.getElementById('overlay').addEventListener('click', () => setMenu(false));     // الضغط خارج القائمة: إغلاق
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); }); // زر Esc: إغلاق
+
+    // إغلاق القائمة بعد اختيار أي رابط منها
+    document.querySelectorAll('.side-menu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  </script>
+</body>
+</html>
